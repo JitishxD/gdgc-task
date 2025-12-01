@@ -1,10 +1,8 @@
-import Home from './Components/Home'
+import Home from './Components/pages/Home.jsx';
 
-function App() {
+export default function App() {
 
   return (
     <Home/>
   )
 }
-
-export default App

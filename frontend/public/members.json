@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Aarav Sharma",
+        "role": "Lead",
+        "skills": [ "React", "Firebase" ],
+        "location": "Delhi",
+        "bio": "Passionate about community building and web dev.",
+        "photo": "https://placehold.co/600x400"
+    },
+    {
+        "id": 2,
+        "name": "Meera Patel",
+        "role": "Core",
+        "skills": [ "AI", "Python", "ML" ],
+        "location": "Mumbai",
+        "bio": "AI enthusiast and hackathon mentor.",
+        "photo": "https://placehold.co/600x400"
+    },
+    {
+        "id": 3,
+        "name": "Rohan Verma",
+        "role": "Member",
+        "skills": [ "Flutter", "UI/UX" ],
+        "location": "Delhi",
+        "bio": "I love designing interfaces that feel alive.",
+        "photo": "https://placehold.co/600x400"
+    },
+    {
+        "id": 4,
+        "name": "Jitish",
+        "role": "Member",
+        "skills": [ "JavaScript" ],
+        "location": "Jaipur",
+        "bio": "lorem25",
+        "photo": "https://placehold.co/600x400"
+    }
+]

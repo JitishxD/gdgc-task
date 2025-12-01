@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Base styles */
+body {
+    background-color: #f9fafb;
+    color: #111827;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
