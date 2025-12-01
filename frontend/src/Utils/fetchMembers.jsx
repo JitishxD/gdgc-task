@@ -1,5 +1,5 @@
 const STORAGE_KEY = "members";
-const URL = "/members.json";
+const URL = "/gdgc-task/members.json";
 
 export const loadMembersFromStorage = () => {
   try {

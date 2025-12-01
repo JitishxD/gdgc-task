@@ -35,7 +35,7 @@ export default function MembersPage() {
 
     (async () => {
       try {
-        const data = await fetchMembers("/members.json", { cache: !cached });
+        const data = await fetchMembers("/gdgc-task/members.json", { cache: !cached });
         if (cancelled) return;
         setMembers(data);
         setFiltered(data);
