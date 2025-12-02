@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --breakpoint-vsm: 360px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

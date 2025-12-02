@@ -9,6 +9,8 @@ import { useThemeContext } from "../../hooks/useTheme";
 import Header from "../Header/Header";
 
 export default function MembersPage() {
+  const URL = "/gdgc-task/members.json";
+
   const { theme, toggleTheme } = useThemeContext();
 
   const [members, setMembers] = useState([]);
@@ -24,22 +26,28 @@ export default function MembersPage() {
 
   // Get Members Data
   useEffect(() => {
+    //If component unmounts before fetch finishes -> we skip updates.
     let cancelled = false;
 
+    // load from cache first and
+    // then asyncly fecth the latest data
     const cached = loadMembersFromStorage();
     if (cached && !cancelled) {
       setMembers(cached);
       setFiltered(cached);
-      setLoading(false);
+      // 2 sec ka wait so that it shows the splash screen
+      setTimeout(() => setLoading(false), 2000);
     }
 
     (async () => {
       try {
-        const data = await fetchMembers("/gdgc-task/members.json", { cache: !cached });
+        const data = await fetchMembers(URL, { cache: !cached });
+        
         if (cancelled) return;
         setMembers(data);
         setFiltered(data);
-        setLoading(false);
+        // 2 sec ka wait so that it shows the splash screen
+        setTimeout(() => setLoading(false), 2000);
       } catch (err) {
         if (cancelled) return;
         setError(err?.message || "Failed to fetch members");
