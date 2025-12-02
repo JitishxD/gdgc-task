@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MembersPage from "./MembersPage";
-import { useThemeContext } from "../../hooks/useTheme";
+import { useThemeContext } from "../../contexts/ThemeContext";
 import ParticleBackground from "../../Utils/ParticleBackground";
 import ThemeToggle from "../Header/ThemeToggle";
 import SplashScreen from "../SplashScreen";
@@ -16,22 +16,16 @@ export default function Home() {
 
   // While app is loading, render the splash screen
   if (loading) {
-    return (
-        <SplashScreen message="Loading App..." />
-    );
+    return <SplashScreen message="Loading App..." />;
   }
 
   // If user has clicked the button, render the Members Page
   if (hasEntered) {
-    return (
-        <MembersPage />
-    );
+    return <MembersPage />;
   }
 
   // Otherwise, render the Landing Page
-  return (
-      <LandingPage onEnter={() => setHasEntered(true)} />
-  );
+  return <LandingPage onEnter={() => setHasEntered(true)} />;
 }
 
 function LandingPage({ onEnter }) {

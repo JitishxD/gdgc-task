@@ -4,7 +4,7 @@ import Filters from "../Header/Filters";
 import ParticleBackground from "../../Utils/ParticleBackground";
 import fetchMembers, { loadMembersFromStorage } from "../../Utils/fetchMembers";
 
-import { useThemeContext } from "../../hooks/useTheme";
+import { useThemeContext } from "../../contexts/ThemeContext";
 
 import Header from "../Header/Header";
 
@@ -42,7 +42,7 @@ export default function MembersPage() {
     (async () => {
       try {
         const data = await fetchMembers(URL, { cache: !cached });
-        
+
         if (cancelled) return;
         setMembers(data);
         setFiltered(data);

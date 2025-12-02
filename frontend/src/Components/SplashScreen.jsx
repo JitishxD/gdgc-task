@@ -1,4 +1,4 @@
-import { useThemeContext } from "../hooks/useTheme";
+import { useThemeContext } from "../contexts/ThemeContext";
 
 export default function SplashScreen(props) {
   const { theme } = useThemeContext();
