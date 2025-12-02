@@ -1,5 +1,5 @@
 const STORAGE_KEY = "members";
-const URL = "/gdgc-task/members.json";
+const URL = "https://gdgc-task-jitish.vercel.app/api/v1/getMembers";
 
 export const loadMembersFromStorage = () => {
   try {

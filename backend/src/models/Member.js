@@ -11,7 +11,7 @@ const memberSchema = new mongoose.Schema({
     required: true,
   },
   role: {
-    type: String,
+    type: [String],
     required: true,
   },
   skills: {
@@ -19,7 +19,8 @@ const memberSchema = new mongoose.Schema({
     default: [],
   },
   location: {
-    type: String,
+    type: [String],
+    required: true,
   },
   bio: {
     type: String,

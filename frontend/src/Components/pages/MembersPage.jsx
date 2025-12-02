@@ -9,7 +9,7 @@ import { useThemeContext } from "../../contexts/ThemeContext";
 import Header from "../Header/Header";
 
 export default function MembersPage() {
-  const URL = "/gdgc-task/members.json";
+  const URL = "https://gdgc-task-jitish.vercel.app/api/v1/getMembers";
 
   const { theme, toggleTheme } = useThemeContext();
 
