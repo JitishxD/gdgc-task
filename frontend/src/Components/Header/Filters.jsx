@@ -10,7 +10,7 @@ const deriveOptions = (list, picker) =>
 
 export default function Filters({ filters, setFilters, members = [] }) {
   const roles = deriveOptions(members, m => m.role);
-  const skills = deriveOptions(members, m => m.skills || []);
+  const skills = deriveOptions(members, m => m.skills);
   const locations = deriveOptions(members, m => m.location);
 
   const toggleValue = (key, value) => {

@@ -69,13 +69,13 @@ export default function MembersPage() {
     const { roles, skills, locations } = filters;
 
     if (roles.length) {
-      list = list.filter((m) => roles.includes(m.role));
+      list = list.filter((m) => m.role?.some((s) => roles.includes(s)));
     }
     if (skills.length) {
-      list = list.filter((m) => m.skills.some((s) => skills.includes(s)));
+      list = list.filter((m) => m.skills?.some((s) => skills.includes(s)));
     }
     if (locations.length) {
-      list = list.filter((m) => locations.includes(m.location));
+      list = list.filter((m) => m.location?.some((s) => locations.includes(s)));
     }
 
     setFiltered(list);

@@ -23,7 +23,7 @@ export default function MemberCard({ member }) {
 
       <h2 className="text-xl font-semibold mt-3 tracking-wide text-gray-900 dark:text-gray-100">{member.name}</h2>
 
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{member.role}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{member.role.join(" - ")}</p>
 
       <div className="flex flex-wrap gap-2 mt-2">
         {member.skills.map((s) => (
