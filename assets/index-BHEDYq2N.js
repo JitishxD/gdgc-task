@@ -17,7 +17,7 @@ Error generating stack: `+u.message+`
             w-full h-44 object-cover rounded-xl\r
             transition-transform duration-300\r
             group-hover:scale-105\r
-          `})}),M.jsx("h2",{className:"text-xl font-semibold mt-3 tracking-wide text-gray-900 dark:text-gray-100",children:A.name}),M.jsx("p",{className:"text-sm text-gray-600 dark:text-gray-400 mb-2",children:Array.isArray(A.role)?A.role.join(" - "):A.role}),M.jsx("div",{className:"flex flex-wrap gap-2 mt-2",children:A.skills.map(D=>M.jsx("span",{className:`\r
+          `})}),M.jsx("h2",{className:"text-xl font-semibold mt-3 tracking-wide text-gray-900 dark:text-gray-100",children:A.name}),M.jsx("p",{className:"text-sm text-gray-600 dark:text-gray-400 mb-2",children:A.role.join(" - ")}),M.jsx("div",{className:"flex flex-wrap gap-2 mt-2",children:A.skills.map(D=>M.jsx("span",{className:`\r
               text-xs px-2 py-1 rounded-full\r
               bg-blue-100 dark:bg-blue-900/30\r
               text-blue-700 dark:text-blue-300\r
