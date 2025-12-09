@@ -22,6 +22,9 @@
     ],
 
     "git": {
-        "deploymentEnabled": false
+        "deploymentEnabled": {
+            "main": true,
+            "gh-pages": false
+        }
     }
 }
