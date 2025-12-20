@@ -1,10 +1,6 @@
-import { useThemeContext } from "../contexts/ThemeContext";
-
 export default function SplashScreen(props) {
-  const { theme } = useThemeContext();
-
   return (
-    <div className={`flex items-center justify-center h-screen transition bg-${theme === "dark" ? "gray-900" : "white"}`}>
+    <div className="flex items-center justify-center h-screen transition bg-white dark:bg-gray-900">
       <div className="text-center animate-pulse">
         <h1 className="text-4xl font-bold">GDGC Members</h1>
         <p>{props.message}</p>

@@ -4,14 +4,10 @@ import Filters from "../Header/Filters";
 import ParticleBackground from "../../Utils/ParticleBackground";
 import fetchMembers, { loadMembersFromStorage } from "../../Utils/fetchMembers";
 
-import { useThemeContext } from "../../contexts/ThemeContext";
-
 import Header from "../Header/Header";
 
 export default function MembersPage() {
   const URL = "https://gdgc-task-jitish.vercel.app/api/v1/getMembers";
-
-  const { theme, toggleTheme } = useThemeContext();
 
   const [members, setMembers] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -96,11 +92,7 @@ export default function MembersPage() {
     <>
       {/* Particle Background */}
       <ParticleBackground />
-      <div
-        className={`min-h-screen ${
-          theme === "light" ? "bg-linear-to-br from-blue-200 via-purple-200 to-pink-200 text-gray-900" : "dark:bg-gray-900 transition-colors duration-300"
-        }`}
-      >
+      <div className="min-h-screen bg-linear-to-br from-blue-200 via-purple-200 to-pink-200 text-gray-900 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 dark:text-white transition-colors duration-300">
         <div className="p-6 max-w-6xl mx-auto">
           <Header search={search} setSearch={setSearch} />
 
